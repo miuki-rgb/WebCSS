@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Live</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 100px 1fr 350px;
+      grid-template-rows: auto auto;
+      gap: 20px;
+      width: 100%;
+      max-width: 1366px;
+      padding: 20px;
+    }
+
+    /* Sidebar kiri */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 40px;
+    }
+
+    .sidebar img.logo {
+      width: 70px;
+      margin-bottom: 30px;
+    }
+
+    .menu-vertical {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      background-color: #e4007f;
+      color: white;
+      padding: 10px;
+      border-radius: 20px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+
+    /* Gambar utama */
+    .main {
+      grid-column: 2 / 3;
+      background-color: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .main img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    /* Kolom kanan */
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .tweet, .goods, .stamp {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .tweet {
+      background-color: #81c6d3;
+      height: 300px;
+    }
+
+    .goods {
+      background-color: #f8b6c8;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .stamp {
+      background-color: #e4007f;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .stamp img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Bagian bawah */
+    .bottom {
+      grid-column: 2 / 4;
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .bottom img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Responsif: Tablet */
+    @media (max-width: 1024px) {
+      .container {
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: auto auto auto;
+      }
+
+      .right {
+        grid-column: 2 / 3;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .tweet, .goods, .stamp {
+        flex: 1 1 48%;
+      }
+
+      .tweet {
+        height: 200px;
+      }
+
+      .goods {
+        height: 120px;
+      }
+
+      .bottom {
+        grid-column: 1 / 3;
+      }
+    }
+
+    /* Responsif: Mobile */
+    @media (max-width: 768px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+      }
+
+      .sidebar {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #f47d30;
+        padding: 10px 0;
+        border-radius: 10px;
+      }
+
+      .menu-vertical {
+        writing-mode: horizontal-tb;
+        text-orientation: initial;
+        background: none;
+        color: white;
+        font-size: 1.1rem;
+        padding: 0 10px;
+      }
+
+      .sidebar img.logo {
+        width: 50px;
+        margin: 0 10px;
+      }
+
+      .main, .right, .bottom {
+        width: 100%;
+      }
+
+      .right {
+        flex-direction: column;
+      }
+
+      .tweet, .goods, .stamp {
+        width: 100%;
+      }
+
+      .tweet {
+        height: 180px;
+      }
+
+      .goods {
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="css/logo.png" alt="Logo" class="logo">
+      <div class="menu-vertical">ラブライブ</div>
+    </div>
+
+    <!-- Gambar utama -->
+    <div class="main">
+      <img src="css/main-visual.jpeg" alt="Main Visual">
+    </div>
+
+    <!-- Kolom kanan -->
+    <div class="right">
+      <div class="tweet">
+        <p style="padding:10px;">Love Live!</p>
+      </div>
+      <div class="goods">グッズ情報</div>
+      <div class="stamp">
+        <img src="css/new-release.jpeg" alt="New Release">
+        <p>虹ヶ咲学園スクールアイドル同好会｜「NIJIGAKU FLOWER MUSIC」の店舗特典が決定！</p>
+      </div>
+    </div>
+
+    <!-- Bagian bawah -->
+    <div class="bottom">
+      <img src="css/l15th.jpeg" alt="Bottom Visual">
+    </div>
+  </div>
+
+</body>
+</html>
