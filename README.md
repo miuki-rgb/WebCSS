@@ -14,8 +14,8 @@
 
 Screenshot berikut menunjukkan hasil akhir dari implementasi halaman profil ini.
 
-![Tampilan Desain Web]([https://raw.githubusercontent.com/miuki-rgb/WebCSS/master/Screenshot%202025-10-28%20194137.png
-])
+![Tampilan Desain Web](https://raw.githubusercontent.com/miuki-rgb/WebCSS/master/Screenshot%202025-10-28%20194137.png)
+
 ---
 
 *Dibuat untuk memenuhi tugas Mata Kuliah Pemrograman Web 1.*
